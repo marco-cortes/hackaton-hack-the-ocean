@@ -20,7 +20,6 @@ app.use("/api/auth", require("./routes/auth"));
 app.use("/api/destinations", require("./routes/destinations"));
 app.use("/api/comments", require("./routes/comments"));
 app.use("/api/reports", require("./routes/reports"));
-app.use("/api/recommendations", require("./routes/recommendations"));
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}`);

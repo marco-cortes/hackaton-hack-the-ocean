@@ -33,17 +33,10 @@ const DestinationSchema = new Schema({
         type: [String],
         required: true
     },
-    comments: {
-        type: [{
-            type: Schema.Types.ObjectId,
-            ref: 'Comment'
-        }],
-        required: true
-    },
     recommendations: {
         type: [{
-            type: Schema.Types.ObjectId,
-            ref: 'Recommendation'
+            title: String,
+            text: String,
         }],
         required: true
     },
@@ -54,10 +47,15 @@ const DestinationSchema = new Schema({
     updated: {
         type: Date,
         default: Date.now
+    },
+    status: {
+        type: String,
+        enum: ['ACCEPTED', 'PENDING', 'REJECTED'],
+        default: 'PENDING'
     }
 });
 
-EventSchema.methods.toJSON = function () {
+DestinationSchema.methods.toJSON = function () {
     const { __v, _id, ...object } = this.toObject();
     object.id = _id;
     return object;
