@@ -2,7 +2,6 @@ const { Router } = require("express");
 const { check } = require("express-validator");
 
 const { getDestinations, getDestination, createDestination, updateDestination, deleteDestination, changeStatus } = require("../controllers/destination");
-const isDate = require("../helpers/isDate");
 const { validateJWT } = require("../middlewares/validate-jwt");
 const { validation } = require("../middlewares/validation");
 
@@ -22,12 +21,16 @@ router.get("/:id", getDestination);
 router.post("/add", [
     check("name", "Name is required").not().isEmpty(),
     check("description", "Description is required").not().isEmpty(),
+    check("contact.phone", "Phone is required").not().isEmpty(),
+    check("contact.email", "Email is required").isEmail(),
     check("user", "User is required").not().isEmpty(),
     check("score", "Score is required").not().isEmpty(),
     check("ubication", "Ubication is required").not().isEmpty(),
     check("photos", "Photos is required").not(),
     check("videos", "Videos is required").not(),
     check("recommendations", "Recommendations is required").not(),
+    check("activities", "Activities is required").not(),
+    check("species", "Species is required").not(),
     validation
 ], createDestination);
 
@@ -35,12 +38,16 @@ router.post("/add", [
 router.put("/update/:id", [
     check("name", "Name is required").not().isEmpty(),
     check("description", "Description is required").not().isEmpty(),
+    check("contact.phone", "Phone is required").not().isEmpty(),
+    check("contact.email", "Email is required").isEmail(),
     check("user", "User is required").not().isEmpty(),
     check("score", "Score is required").not().isEmpty(),
     check("ubication", "Ubication is required").not().isEmpty(),
     check("photos", "Photos is required").not(),
     check("videos", "Videos is required").not(),
     check("recommendations", "Recommendations is required").not(),
+    check("activities", "Activities is required").not(),
+    check("species", "Species is required").not(),
     validation
 ], updateDestination);
 

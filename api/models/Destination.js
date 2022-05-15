@@ -14,6 +14,13 @@ const DestinationSchema = new Schema({
         ref: 'User',
         required: true
     },
+    contact: {
+        type: {
+            phone: String,
+            email: String
+        },
+        required: true
+    },
     score: {
         type: Number,
         required: true
@@ -37,6 +44,23 @@ const DestinationSchema = new Schema({
         type: [{
             title: String,
             text: String,
+            photo: String,
+        }],
+        required: true
+    },
+    activities: {
+        type: [{
+            title: String,
+            text: String,
+            photos: [String],
+        }],
+        required: true
+    },
+    species: {
+        type: [{
+            name: String,
+            description: String,
+            photos: [String],
         }],
         required: true
     },
