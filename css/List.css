@@ -1,0 +1,120 @@
+:root{
+    --color1:#1B264F;
+    --colortext:aliceblue;
+    --darkcolor:#071236;
+    --shadowlight:rgb(186, 186, 240);
+    --darkshadow: rgb(82, 82, 107);
+    --lightcolor:#1d348a;
+}
+
+*{
+    margin:0;
+    padding: 0;;
+}
+
+a{
+    text-decoration: none;
+}
+
+.header{
+    margin: 0rem;
+    padding: 0rem;
+}
+
+.logo{
+    display: flex;
+}
+
+.tittles{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color1);
+    box-shadow: 4px 4px 4px var(--darkshadow);
+}
+
+
+.tittle1{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.7rem;
+    color: var(--colortext);
+    font-weight: 800;
+    padding: 1rem;
+}
+
+.tittle1:hover{
+    color: rgb(151, 201, 186);
+    background-color: var(--darkcolor);
+    border-radius: .3rem;
+}
+
+
+.footer{
+    width: 100%;
+    background-color: var(--color1);
+    padding-bottom: 5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+.tags{
+    display: flex;
+    justify-content: center;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.7rem;
+    color: var(--colortext);
+    font-weight: 800;
+    padding: 1rem;
+}
+
+.tags:hover{
+    color: var(--lightcolor);
+}
+
+.footericons{
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.tags2{
+    padding: 4rem;
+    font-size: 52px;
+}
+
+.destinys{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width:1500px;
+    box-shadow: 4px 4px 4px var(--darkshadow);
+
+}
+
+
+.principallist{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.tittle2{
+    display: flex;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.7rem;
+    color: var(--color1);
+    font-weight: 800;
+    padding: 1rem;
+}
+
+.tittle2:hover{
+    color: var(--lightcolor);
+    background-color: var(--shadowlight);
+    box-shadow: 4px 4px 4px var(--darkshadow);
+
+}
