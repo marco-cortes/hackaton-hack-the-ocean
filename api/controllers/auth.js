@@ -10,13 +10,11 @@ const createUser = async (req, res = response) => {
     try {
         // Search user by email
         let user = await User.findOne({ email: req.body.email });
-
         // If user exists, return error
         if (user) {
-            console.log(user);
             return res.status(400).json({
                 ok: false,
-                message: "User already exists"
+                message: "El usuario ya existe"
             });
         }
 
@@ -47,7 +45,7 @@ const createUser = async (req, res = response) => {
     } catch (error) {
         return res.status(500).json({
             ok: false,
-            message: "Error in the server",
+            message: "Error en el servidor",
         });
     }
 }
@@ -59,7 +57,7 @@ const login = async (req, res = response) => {
         if (!user) {
             return res.status(400).json({
                 ok: false,
-                message: "User not found"
+                message: "Usuario no encontrado"
             });
         }
         // Validate password
@@ -67,7 +65,7 @@ const login = async (req, res = response) => {
         if (!validPassword) {
             return res.status(400).json({
                 ok: false,
-                message: "Password incorrect"
+                message: "Contraseña incorrecta"
             });
         }
         // Generate token
@@ -89,7 +87,7 @@ const login = async (req, res = response) => {
     } catch (error) {
         return res.status(500).json({
             ok: false,
-            message: "Error in the server",
+            message: "Error en el servidor",
         });
     }
 }
@@ -106,7 +104,7 @@ const updateUser = async (req, res = response) => {
         if (!user) {
             return res.status(400).json({
                 ok: false,
-                message: "User not found"
+                message: "Usuario no encontrado"
             });
         }
 
@@ -119,7 +117,7 @@ const updateUser = async (req, res = response) => {
     } catch (error) {
         return res.status(500).json({
             ok: false,
-            message: "Error in the server",
+            message: "Error en el servidor",
         });
     }
 }

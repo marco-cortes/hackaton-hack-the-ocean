@@ -3,22 +3,28 @@ import { useForm } from "../helpers/useForm";
 import { startRegister } from "../redux/actions/auth";
 import register from "../images/register.svg";
 import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
-export const RegisterView = () => {
-  const [form, setForm, reset] = useForm({ name:"", lastName: "", email: "", password: "", passwordConfirm: "" });
+export const RegisterView = ({ role }) => {
+  const [form, setForm, reset] = useForm({ name: "", lastName: "", email: "", password: "", passwordConfirm: "" });
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if(form.password.trim() !== form.passwordConfirm.trim())
-      return alert("Las contraseñas no coinciden");
+    if (form.password.trim() !== form.passwordConfirm.trim())
+      return Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Las contraseñas no coinciden.",
+      });
 
     dispatch(startRegister({
       name: form.name,
       lastName: form.lastName,
       email: form.email,
       password: form.password,
+      role
     }));
     reset();
   }
@@ -27,7 +33,10 @@ export const RegisterView = () => {
     <div className="auth-container register">
       <div className="auth-form-container">
         <h2 className="title-h2">¡Bienvenido!</h2>
-        <h3 className="title-h3">Crea una nueva cuenta</h3>
+        <h3 className={role === "OWNER_ROLE" ? "title-h3" : "title-h3 mb-3" }>Crea una cuenta nueva</h3>
+        {
+          role === "OWNER_ROLE"  && <h3 className="title-h4 mb-3">y publica tu destinto turístico</h3>
+        }
         <form className="auth-form" onSubmit={handleSubmit}>
           <div className="input-group">
             <span className="input-icon"><i className="fa-solid fa-user"></i></span>

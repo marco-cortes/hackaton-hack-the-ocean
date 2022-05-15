@@ -7,7 +7,7 @@ const getDestinations = async (req, res = response) => {
         const role = req.role;
 
         // if role user is user, return only the destinations that are public
-        if (role === 'USER_ROLE') {
+        if (role === 'USER_ROLE' || !role) {
             const destinations = await Destination.find({
                 status: 'ACCEPTED'
             });

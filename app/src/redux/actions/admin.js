@@ -36,3 +36,9 @@ export const startChangeStatus = (id, status) => {
         dispatch(updateDestination(id, status));
     }
 }
+
+export const clearReports = () => {
+    return {
+        type: types.clearReport
+    }
+}

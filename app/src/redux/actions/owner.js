@@ -36,7 +36,7 @@ export const startUpdateDestination = (destination) => {
     }
 }
 
-const updateDestination = (destination) => {
+export const updateDestination = (destination) => {
     return {
         type: types.destinationUpdate,
         payload: destination
@@ -61,5 +61,12 @@ const deleteDestination = (id) => {
     return {
         type: types.destinationDelete,
         payload: id
+    }
+}
+
+
+export const clearDestinations = () => {
+    return {
+        type: types.clearDestination
     }
 }

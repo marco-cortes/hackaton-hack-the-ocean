@@ -10,6 +10,8 @@ export const UserRoute = ({ children }) => {
         localStorage.setItem("lastPath", location.pathname+location.search);
 
     return user && user.role === "USER_ROLE" ?
-        children
+        <div className="container">
+            {children}
+        </div>
         : <Navigate to="/login" />
 }

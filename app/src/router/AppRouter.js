@@ -21,6 +21,7 @@ import { AdminView } from "../views/AdminView";
 import { ReportsView } from "../views/ReportsView";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { startLoadDestinations } from "../redux/actions/user";
 
 export const AppRouter = () => {
 
@@ -29,6 +30,7 @@ export const AppRouter = () => {
 
     useEffect(() => {
         dispatch(startChecking());
+        dispatch(startLoadDestinations());
     }, [dispatch]);
 
     if (authCheck) {
@@ -50,7 +52,17 @@ export const AppRouter = () => {
                     } />
                     <Route path="/register" element={
                         <PublicRoute>
-                            <RegisterView />
+                            <RegisterView role={"USER_ROLE"} />
+                        </PublicRoute>
+                    } />
+                    <Route path="/owner/register" element={
+                        <PublicRoute>
+                            <RegisterView role={"OWNER_ROLE"} />
+                        </PublicRoute>
+                    } />
+                    <Route path="/admin/register" element={
+                        <PublicRoute>
+                            <RegisterView role={"ADMIN_ROLE"} />
                         </PublicRoute>
                     } />
                     <Route path="/user/" element={
@@ -79,9 +91,9 @@ export const AppRouter = () => {
                         </UserRoute>
                     } />
                     <Route path="/owner/" element={
-                        <UserRoute>
+                        <OwnerRoute>
                             <OwnerView />
-                        </UserRoute>
+                        </OwnerRoute>
                     } />
                     <Route path="/owner/destination/new" element={
                         <OwnerRoute>
