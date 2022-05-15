@@ -381,14 +381,16 @@ a {
 
 
 .tarjetas {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
 }
 
 .tarjeta {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 420px;
     border: 1px solid lightgray;
     box-shadow: 2px 2px 8px 4px #d3d3d3d1;
     border-radius: 15px;
@@ -430,3 +432,49 @@ a {
     color: white;   
 }
 
+.hero{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 50%);
+    margin: 3rem 3rem;
+}
+
+.texto-hero{
+    margin: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.imagen-hero{
+    border-radius: 10px;
+}
+
+.division{
+    margin-left: -10%;
+    margin-right: 10%;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    display: flex;
+    padding: 2rem 10rem;
+    background-color: var(--lightcolor);
+    color: white;
+    border-radius: 10px;
+}
+
+.imagenes-actividad{
+    width: 100%;
+    padding: 1rem;
+}
+
+.imagenes-actividad img{
+    border-radius: 10px;
+}
+
+.actividades-container{
+    width: 100%;    
+    height: 100%;
+    min-height: calc(100vh - 250px);
+    display: grid;
+    align-items: center;   
+}
