@@ -38,6 +38,7 @@ export const startRegister = (user) => {
             }
             localStorage.setItem("token", body.token);
             dispatch(login(body.user));
+            dispatch(startLoadDestinations());
         } catch(error) {
 
         }

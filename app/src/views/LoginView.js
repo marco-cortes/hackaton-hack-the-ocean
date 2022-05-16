@@ -26,7 +26,7 @@ export const LoginView = () => {
         <form className="auth-form" onSubmit={handleSubmit}>
           <div className="input-group">
             <span className="input-icon"><i className="fa-solid fa-at"></i></span>
-            <input className="input-control" type="text" name="email" placeholder="Correo electrónico" required onChange={setForm} value={form.email} />
+            <input className="input-control" type="text" name="email" placeholder="Correo electrónico" required onChange={setForm} value={form.email} autoComplete="off" />
           </div>
           <div className="input-group">
             <span className="input-icon"><i className="fa-solid fa-lock"></i></span>

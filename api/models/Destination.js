@@ -27,17 +27,14 @@ const DestinationSchema = new Schema({
     },
     ubication: {
         type: {
-            lat: Number,
-            lng: Number
+            state: String,
+            city: String,
+            cp: String,
         },
         required: true
     },
-    photos: {
-        type: [String],
-        required: true
-    },
-    videos: {
-        type: [String],
+    photo: {
+        type: String,
         required: true
     },
     recommendations: {
@@ -52,7 +49,7 @@ const DestinationSchema = new Schema({
         type: [{
             title: String,
             text: String,
-            photos: [String],
+            photo: String,
         }],
         required: true
     },
@@ -60,7 +57,7 @@ const DestinationSchema = new Schema({
         type: [{
             name: String,
             description: String,
-            photos: [String],
+            photo: String,
         }],
         required: true
     },

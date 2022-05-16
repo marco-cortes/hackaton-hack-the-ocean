@@ -40,15 +40,15 @@ export const RegisterView = ({ role }) => {
         <form className="auth-form" onSubmit={handleSubmit}>
           <div className="input-group">
             <span className="input-icon"><i className="fa-solid fa-user"></i></span>
-            <input className="input-control" type="text" name="name" placeholder="Nombre(s)" required onChange={setForm} value={form.name} />
+            <input className="input-control" type="text" name="name" placeholder="Nombre(s)" required onChange={setForm} value={form.name} autoComplete="off"  />
           </div>
           <div className="input-group">
             <span className="input-icon"><i className="fa-solid fa-user"></i></span>
-            <input className="input-control" type="text" name="lastName" placeholder="Apellido(s)" required onChange={setForm} value={form.lastName} />
+            <input className="input-control" type="text" name="lastName" placeholder="Apellido(s)" required onChange={setForm} value={form.lastName} autoComplete="off"  />
           </div>
           <div className="input-group">
             <span className="input-icon"><i className="fa-solid fa-at"></i></span>
-            <input className="input-control" type="text" name="email" placeholder="Correo electrónico" required onChange={setForm} value={form.email} />
+            <input className="input-control" type="email" name="email" placeholder="Correo electrónico" required onChange={setForm} value={form.email} autoComplete="off" />
           </div>
           <div className="input-group">
             <span className="input-icon"><i className="fa-solid fa-lock"></i></span>

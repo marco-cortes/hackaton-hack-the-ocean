@@ -3,7 +3,7 @@ import { types } from "../types/types";
 
 export const startAddDestination = (destination) => {
     return async (dispatch) => {
-        const resp = await authFetch("destinations/", destination, "POST");
+        const resp = await authFetch("destinations/add", destination, "POST");
         const body = await resp.json();
 
         if (!body.ok) {

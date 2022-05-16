@@ -14,14 +14,14 @@ import { DestinationView } from "../views/DestinationView";
 import { ActivityView } from "../views/ActivityView";
 import { SpecieView } from "../views/SpecieView";
 import { ReportView } from "../views/ReportView";
-import { OwnerView } from "../views/OwnerView";
 import { DestinationNewView } from "../views/DestinationNewView";
 import { DestinationEditView } from "../views/DestinationEditView";
-import { AdminView } from "../views/AdminView";
 import { ReportsView } from "../views/ReportsView";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { startLoadDestinations } from "../redux/actions/user";
+import { AboutView } from "../views/AboutView";
+import { ContactView } from "../views/ContactView";
 
 export const AppRouter = () => {
 
@@ -43,7 +43,17 @@ export const AppRouter = () => {
                 <Header />
                 <Routes>
                     <Route path="/" element={
-                        <HomeView />
+                        <HomeView  />
+                    } />
+                    <Route path="/about" element={
+                        <div className="container">
+                            <AboutView  />
+                        </div>
+                    } />
+                    <Route path="/contact" element={
+                        <div className="container">
+                            <ContactView  />
+                        </div>
                     } />
                     <Route path="/login" element={
                         <PublicRoute>
@@ -92,7 +102,7 @@ export const AppRouter = () => {
                     } />
                     <Route path="/owner/" element={
                         <OwnerRoute>
-                            <OwnerView />
+                            <DestinationsView />
                         </OwnerRoute>
                     } />
                     <Route path="/owner/destination/new" element={
@@ -112,7 +122,7 @@ export const AppRouter = () => {
                     } />
                     <Route path="/admin/" element={
                         <AdminRoute>
-                            <AdminView />
+                            <DestinationsView />
                         </AdminRoute>
                     } />
                     <Route path="/admin/destination/:id" element={

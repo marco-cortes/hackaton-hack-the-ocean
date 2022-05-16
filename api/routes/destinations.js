@@ -9,13 +9,14 @@ const { validation } = require("../middlewares/validation");
 
 // All routes will be valiated by the middleware validateJWT
 const router = Router();
-router.use(validateJWT);
 
 // Get all destinations
 router.get("/", getDestinations);
 
 // Get a destination by id
 router.get("/:id", getDestination);
+
+router.use(validateJWT);
 
 // Create a new destination
 router.post("/add", [
@@ -26,8 +27,7 @@ router.post("/add", [
     check("user", "User is required").not().isEmpty(),
     check("score", "Score is required").not().isEmpty(),
     check("ubication", "Ubication is required").not().isEmpty(),
-    check("photos", "Photos is required").not(),
-    check("videos", "Videos is required").not(),
+    check("photo", "Photo is required").not(),
     check("recommendations", "Recommendations is required").not(),
     check("activities", "Activities is required").not(),
     check("species", "Species is required").not(),
@@ -43,8 +43,7 @@ router.put("/update/:id", [
     check("user", "User is required").not().isEmpty(),
     check("score", "Score is required").not().isEmpty(),
     check("ubication", "Ubication is required").not().isEmpty(),
-    check("photos", "Photos is required").not(),
-    check("videos", "Videos is required").not(),
+    check("photo", "Photo is required").not(),
     check("recommendations", "Recommendations is required").not(),
     check("activities", "Activities is required").not(),
     check("species", "Species is required").not(),

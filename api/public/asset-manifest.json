@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5cb99c7f.css",
+    "main.js": "/static/js/main.cf453ff5.js",
+    "static/media/beach-2.jpg": "/static/media/beach-2.13fee5aff1c25c25193e.jpg",
+    "static/media/cozumel.jpg": "/static/media/cozumel.55a6d5070fc25bf5af8b.jpg",
+    "static/media/header-1.jpg": "/static/media/header-1.55a6d5070fc25bf5af8b.jpg",
+    "static/media/6.jpg": "/static/media/6.403d401ec646257e92b3.jpg",
+    "static/media/beach-1.jpg": "/static/media/beach-1.6eb25da068ec8b6a7e53.jpg",
+    "static/media/beach-3.jpg": "/static/media/beach-3.db4974981823bd8e5196.jpg",
+    "static/media/turtle-1.jpg": "/static/media/turtle-1.5e4b9ce219147a90c070.jpg",
+    "static/media/5.jpg": "/static/media/5.0077bb35830becf4bd1d.jpg",
+    "static/media/4.jpg": "/static/media/4.b046d324781803534926.jpg",
+    "static/media/1.jpg": "/static/media/1.990d6c87a33632041f10.jpg",
+    "static/media/2.jpg": "/static/media/2.acec61cb42b24cd3a4a6.jpg",
+    "static/media/turismo.jpg": "/static/media/turismo.4bea530d8e717a267d0e.jpg",
+    "static/media/ajolote.png": "/static/media/ajolote.14b7188355adbf3dbc50.png",
+    "static/media/3.jpg": "/static/media/3.5ba4ca3fb1fd60ce6a43.jpg",
+    "static/media/login.svg": "/static/media/login.f14a2d4a64f43d1f7f8d96fb4f5ae16c.svg",
+    "static/media/register.svg": "/static/media/register.f9a4e093d22b834e5d4acdec1cec1e5c.svg",
+    "index.html": "/index.html",
+    "main.5cb99c7f.css.map": "/static/css/main.5cb99c7f.css.map",
+    "main.cf453ff5.js.map": "/static/js/main.cf453ff5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5cb99c7f.css",
+    "static/js/main.cf453ff5.js"
+  ]
+}

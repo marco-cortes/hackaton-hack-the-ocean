@@ -33,19 +33,16 @@ export const Header = () => {
             </Link>
 
             <div className="nav-links" id="nav-links">
+                        <NavLink className={({ isActive }) => linkActive(isActive)} to="/">Inicio</NavLink>
                 {
                     !user ? 
                     <>
-                        <NavLink className={({ isActive }) => linkActive(isActive)} to="/">Inicio</NavLink>
-                        <NavLink className={({ isActive }) => linkActive(isActive)} to="/about">Acerca de</NavLink>
-                        <NavLink className={({ isActive }) => linkActive(isActive)} to="/contact">Contacto</NavLink>
                         <NavLink className={({ isActive }) => linkActive(isActive)} to="/login">Login</NavLink>
                         <NavLink className={({ isActive }) => linkActive(isActive)} to="/register">Registro</NavLink>
                     </> :
                     user.role === "USER_ROLE" ?
                     <>
                         <NavLink className={({ isActive }) => linkActive(isActive)} to="/user/">Destinos</NavLink>
-                        <NavLink className={({ isActive }) => linkActive(isActive)} to="/user/report/new">Reportar</NavLink>
                     </>
                     : user.role === "OWNER_ROLE" ?
                     <>

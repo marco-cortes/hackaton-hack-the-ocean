@@ -16,6 +16,8 @@ app.use(express.static("public"));
 
 app.use(express.json());
 
+
+// Get all destinations
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/destinations", require("./routes/destinations"));
 app.use("/api/comments", require("./routes/comments"));
