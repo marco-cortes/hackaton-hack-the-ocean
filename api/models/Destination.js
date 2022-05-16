@@ -14,36 +14,50 @@ const DestinationSchema = new Schema({
         ref: 'User',
         required: true
     },
+    contact: {
+        type: {
+            phone: String,
+            email: String
+        },
+        required: true
+    },
     score: {
         type: Number,
         required: true
     },
     ubication: {
         type: {
-            lat: Number,
-            lng: Number
+            state: String,
+            city: String,
+            cp: String,
         },
         required: true
     },
-    photos: {
-        type: [String],
-        required: true
-    },
-    videos: {
-        type: [String],
-        required: true
-    },
-    comments: {
-        type: [{
-            type: Schema.Types.ObjectId,
-            ref: 'Comment'
-        }],
+    photo: {
+        type: String,
         required: true
     },
     recommendations: {
         type: [{
-            type: Schema.Types.ObjectId,
-            ref: 'Recommendation'
+            title: String,
+            text: String,
+            photo: String,
+        }],
+        required: true
+    },
+    activities: {
+        type: [{
+            title: String,
+            text: String,
+            photo: String,
+        }],
+        required: true
+    },
+    species: {
+        type: [{
+            name: String,
+            description: String,
+            photo: String,
         }],
         required: true
     },
@@ -54,10 +68,15 @@ const DestinationSchema = new Schema({
     updated: {
         type: Date,
         default: Date.now
+    },
+    status: {
+        type: String,
+        enum: ['ACCEPTED', 'PENDING', 'REJECTED'],
+        default: 'PENDING'
     }
 });
 
-EventSchema.methods.toJSON = function () {
+DestinationSchema.methods.toJSON = function () {
     const { __v, _id, ...object } = this.toObject();
     object.id = _id;
     return object;

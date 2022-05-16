@@ -29,7 +29,7 @@ const ReportSchema = new Schema({
     },
 });
 
-EventSchema.methods.toJSON = function () {
+ReportSchema.methods.toJSON = function () {
     const { __v, _id, ...object } = this.toObject();
     object.id = _id;
     return object;

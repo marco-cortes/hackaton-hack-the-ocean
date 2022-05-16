@@ -29,7 +29,7 @@ const CommentSchema = new Schema({
     }
 });
 
-EventSchema.methods.toJSON = function () {
+CommentSchema.methods.toJSON = function () {
     const { __v, _id, ...object } = this.toObject();
     object.id = _id;
     return object;
