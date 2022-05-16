@@ -1,0 +1,403 @@
+:root{
+    --mainColor: #1B264F;
+    --buttons: #8FD14F;
+    --subTitle: #274690;
+    --div: #25458e;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* HEADER */
+
+header{
+    background-color: var(--mainColor);
+    display: flex;
+    justify-content: space-between;
+}
+
+header img{
+    width: 25px;
+    padding: 10px;
+}
+
+nav a{
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    height: 400px;
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    padding-left: 10%;
+    background-image: url(/assets/header-1.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+h1{
+    font-weight: 600px;
+    font-size: 50px;
+}
+
+h2{
+    font-weight: 600px;
+    font-size: 30px;
+}
+
+h3{
+    font-weight: 600px;
+    font-size: 20px;
+}
+
+h4{
+    font-weight: 600px;
+    font-size: 20px;
+}
+
+/* About Us */
+
+.about{
+    display: flex;
+    margin: 40px 10%;
+    justify-content: space-evenly;
+
+}
+
+.about-img{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+}
+
+.about-content{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    color: var(--mainColor);
+}
+
+.about-content p{
+    font-weight: 300;
+    color: var(--mainColor);
+    padding: 20px;
+}
+
+.about img{
+    width: 250px;
+}
+
+.about-content button{
+    background-color: var(--mainColor);
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Location */
+
+.location{
+    background: red;
+    margin: 0 10%;
+}
+
+.next-location{
+    display: flex;
+    width: 20%;
+    background: green;
+}
+
+.location img{
+    width: 200px;
+    background: blue;
+}
+
+/******** DESTINO PAGE *********/
+
+/* SECTION: destino */
+.destino-section{
+    margin: 20px 10%;
+}
+
+.destino{
+    display: flex;
+    justify-content: space-between;
+}
+
+.destino-title{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.destino-img{
+    padding: 10px;
+    width: 50%;
+}
+
+.destino-section img{
+    width: 100%;
+}
+
+.destino-location{
+    margin: 8% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.destino-location h3, .destino-location p{
+    padding: 10px 30px;
+    text-align: center;
+    font-weight: 300;
+    color: var(--mainColor);
+}
+
+/* SECTION: actividades*/
+.actividad-section{
+    background: var(--subTitle);
+    margin-right: 10%;
+    margin-top: 100px;
+    display: flex;
+    padding: 40px 70px;
+    color: #fff;
+}
+
+.actividades{
+    padding: 20px;
+    width: 50%;
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.actividades h3, .actividades p{
+    padding: 10px;
+}
+
+.actividades-img{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.img-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.actividad-section img{
+    width: 200px;
+    height: 100%;
+}
+
+.actividad{
+    width: 100%;
+    padding: 10px;
+}
+
+/* SECTION: recomendaciones */
+.recomendaciones-section{
+    margin: 100px 10% 0 10%;
+}
+
+.recomendaciones-section h3{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.recomendaciones-cards{
+    display: flex;
+    padding: 10px;
+    
+}
+
+.recomendaciones-card{
+    border: 2px solid var(--mainColor);
+    padding: 10px;
+    margin: 10px;
+    color:var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.recomendaciones-section img{
+    width: 70%;
+    padding: 20px 0px;
+}
+
+.recomendaciones-card p{
+    padding: 10px;
+    text-align: center;
+}
+
+/* SECTION: fauna */
+.fauna-section{
+    margin: 100px 0px 30px 0px;
+}
+
+.fauna-title{
+    background: var(--subTitle);
+    color: #fff;
+    padding: 30px;
+    margin-right: 10%;
+    text-align: center;
+}
+
+.fauna-section img{
+    width: 70%;
+}
+
+.fauna-content{
+    margin: 0px 10%;
+    display: flex;
+    padding: 40px 0px;
+}
+
+.fauna-card{
+    width: 30%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin: 10px;
+    justify-content: space-evenly;
+    border: 2px solid var(--mainColor);
+    border-radius: 5px;
+}
+
+.fauna-btn{
+    background: var(--buttons);
+    padding: 10px 20px;
+    border-radius: 5px;
+    border-color: var(--buttons);
+}
+
+.fauna-card a{
+    text-decoration: none;
+    color: #fff;
+}
+
+/* FOOTER */
+
+/* Modificar el footer con el footer ya existente */
+footer{
+    background: var(--mainColor);
+    color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+/********* TURTLE PAGE ********/
+
+.animal-title{
+    background: var(--subTitle);
+    color: #fff;
+    padding: 20px;
+    padding-left: 10%;
+    margin: 30px 10% 20px 0;
+}
+
+/* Slider de imagenes */
+.animal-content{
+    display: flex;
+    margin: 20px 10%;
+}
+
+.animal-text{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    color: var(--mainColor);
+}
+
+.animal-img{
+    margin: auto;
+    width: 50%;
+    padding: 30px;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+ul.slider{
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+ul.slider li{
+    position: absolute; 
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: inherit;
+    height: inherit;
+    transition: opacity .5s;
+}
+
+ul.slider li img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+ul.slider li:first-child{
+    opacity: 1;
+}
+
+ul.slider li:target{
+    opacity: 1;
+}
+
+.menu{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.menu li{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a{
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background-color: var(--mainColor);
+    width: 15px;
+    height: 15px;
+    font-size: 20px;
+    border-radius: 100%;
+}
